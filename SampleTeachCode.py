@@ -6,7 +6,7 @@ from sklearn import preprocessing
     
 #from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
-
+from sklearn.tree import export_graphviz
 
 import sys
 if sys.version_info >= (3, 0):
@@ -90,7 +90,7 @@ print "SKLearn calc accuracy (true diag M):\t%.2f%%" % float(100*sklearn.metrics
 print "SKLearn calc f1 score:\t%.2f" % sklearn.metrics.f1_score(model_predictions,test_labels)
 print "\n"
 
-from sklearn.tree import export_graphviz
+#for reference: from sklearn.tree import export_graphviz
 export_graphviz(bc_NewModel,feature_names=new_test_data.columns)
 
 print new_train_data.columns
